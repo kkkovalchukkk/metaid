@@ -9,6 +9,541 @@
 </head>
 
 <body>
+    <div class="overlay">
+        <div class="popup popup--login modal">
+            <button class="close-btn popup__close-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 14.3787L21.2009 23.5227C21.8412 24.1591 22.8794 24.1591 23.5197 23.5227C24.1601 22.8863 24.1601 21.8546 23.5197 21.2182L14.2443 12L23.5197 2.78183C24.1601 2.14545 24.1601 1.11367 23.5197 0.477285C22.8794 -0.159096 21.8412 -0.159096 21.2009 0.477286L12 9.62132L2.79913 0.477287C2.15879 -0.159096 1.12059 -0.159096 0.480255 0.477287C-0.160082 1.11367 -0.160084 2.14545 0.480255 2.78183L9.75573 12L0.480255 21.2182C-0.160082 21.8546 -0.160082 22.8863 0.480255 23.5227C1.12059 24.1591 2.15879 24.1591 2.79913 23.5227L12 14.3787Z"
+                        fill="#576ACA" />
+                </svg>
+            </button>
+            <h2 class="popup__heading">
+                Вход в личный кабинет
+            </h2>
+            <form action="" class="popup__login-form">
+                <fieldset class="popup__login-form-fieldset">
+                    <label for="email-input" class="popup__login-form-label">
+                        Логин
+                    </label>
+                    <input id="email-input" type="text"
+                        class="popup__login-form-text-input popup__login-form-text-input--login"
+                        placeholder="Введите E-mail">
+                </fieldset>
+                <fieldset class="popup__login-form-fieldset">
+                    <label for="password-input" class="popup__login-form-label">
+                        Пароль
+                    </label>
+                    <input type="password" placeholder="Введите пароль"
+                        class="popup__login-form-text-input popup__login-form-text-input--pass">
+                </fieldset>
+                <div class="popup__login-form-row">
+                    <div class="popup__login-form-row-el">
+                        <label class="popup__login-form-row-el-label">
+                            <input type="checkbox" style="display: none;" class="popup__login-form-checkbox-input">
+                            <div class="popup__login-form-checkbox"></div>
+                            Запомнить меня
+                        </label>
+                    </div>
+                    <div class="popup__login-form-row-el">
+                        <a href="#" class="popup__login-form-link">
+                            Забыли свой пароль?
+                        </a>
+                    </div>
+                </div>
+                <button class="popup__login-form-submit-btn" type="submit">
+                    Войти
+                </button>
+                <a href="#" class="popup__login-form-register-link">
+                    Зарегистрироваться
+                </a>
+            </form>
+        </div>
+        <div class="container modal">
+            <div class="container__header">
+                <h2 class="container__heading">
+                    Мероприятия метавселенной
+                </h2>
+                <button class="close-btn container__close-btn">
+                    <div class="container__close-btn-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8 9.58579L14.1339 15.6818C14.5608 16.1061 15.2529 16.1061 15.6798 15.6818C16.1067 15.2576 16.1067 14.5697 15.6798 14.1454L9.49618 8L15.6798 1.85455C16.1067 1.4303 16.1067 0.742446 15.6798 0.318191C15.2529 -0.106064 14.5608 -0.106064 14.1339 0.318191L8 6.41421L1.86608 0.318189C1.43919 -0.106066 0.747061 -0.106066 0.320169 0.318189C-0.106723 0.742444 -0.106723 1.4303 0.320168 1.85455L6.50382 8L0.320168 14.1454C-0.106724 14.5697 -0.106724 15.2576 0.320168 15.6818C0.747061 16.1061 1.43919 16.1061 1.86608 15.6818L8 9.58579Z"
+                                fill="#576ACA" />
+                        </svg>
+                    </div>
+                    Закрыть
+                </button>
+            </div>
+            <div class="container__main">
+                <div class="container__row">
+                    <div class="container__filters">
+                        <select name="type" id="type-selector" class="container__filters-select">
+                            <option value="" disabled selected>Тип мероприятия</option>
+                            <option value="conference">
+                                Конференция
+                            </option>
+                            <option value="master-class">
+                                Мастер-классы
+                            </option>
+                        </select>
+                        <select name="type" id="type-selector" class="container__filters-select">
+                            <option value="" disabled selected>Площадка</option>
+                            <option value="Квартал образования">Квартал образования</option>
+                            <option value="Квартал финансовой грамотности">Квартал финансовой грамотности</option>
+                        </select>
+                    </div>
+                    <div class="container__date">
+                        <button class="container__date-btn">
+                            Сегодня
+                        </button>
+                        <label class="container__date-choose-btn">
+                            Выбрать дату
+                        </label>
+                    </div>
+                </div>
+                <div class="container__list">
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img/card-1.jpg"
+                            alt="Конференция “Развитие финансовой отрасли в России - 2023”" class="container__card-img">
+                        <div class="container__card-body">
+                            <span class="container__card-type">
+                                конференции
+                            </span>
+                            <h3 class="container__card-heading">
+                                Конференция “Развитие финансовой отрасли в России - 2023”
+                            </h3>
+                            <ul class="container__card-info-list">
+                                <li class="container__card-info-list-item container__card-info-list-item--location">
+                                    Квартал финансовой грамотности
+                                </li>
+                                <li class="container__card-info-list-item container__card-info-list-item--time">
+                                    30 октября 2023
+                                </li>
+                            </ul>
+                            <a href="#" class="container__card-link">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="menu">
         <div class="menu__toggler">
             <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +585,7 @@
                                         fill="#8D8D8D" />
                                 </svg>
                             </div>
-                            <span class="menu__nav-link">
+                            <span class="menu__nav-link" id="register-link">
                                 Вход/Регистрация
                             </span>
                         </a>
@@ -71,7 +606,7 @@
                         </a>
                     </li>
                     <li class="menu__nav-item">
-                        <a href="#" class="menu__nav-item-link">
+                        <a href="#" class="menu__nav-item-link" id="competition-link">
                             <div class="menu__nav-item-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +708,7 @@
                             </span>
                         </a>
                     </li>
-                </ul>
+                    </ul>
             </nav>
         </div>
         <div class="menu__bottom">
@@ -233,6 +768,7 @@
             </li>
         </ul>
     </nav>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
